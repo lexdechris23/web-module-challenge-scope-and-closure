@@ -41,7 +41,7 @@ Find the file `index.js` and complete the tasks.
 
 Edit the `ReadMe` file with your answers.
 
-1. In your own words, define closure (1-2 sentences).
+1. In your own words, define closure (1-2 sentences). Closure is like a function encapsulated in another function. Important to note is the inner function will have access to the outer function's scope.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -62,9 +62,10 @@ dansRoll();
 dansRoll();
 ```
 
-a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+a. Where is closure used in this code? How can you tell? ------console.log(`${name} rolled a ${newRoll}`)---- It calls back to the outer function.
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? "rolled a" will always be the same.
+What could change? value of "newRoll"
+c. What is the lexical scope of `newRoll`? personalDice()
 
 ### Task 2c - Exit Ticket
 
@@ -81,6 +82,9 @@ See if you can complete one or more of the following challenges:
 1. Predict the output of the code below and explain why this is the output using what you learned today. When you're ready for answers, view an explanation [here](https://www.coderbyte.com/algorithm/3-common-javascript-closure-questions
 
 ```js
+
+a will come back undefined but b will return defined. This is because when value of 'a' is searched is comes back as being equal to 'b', which at that point is not defined.
+
 (function(){
   var a = b = 3;
 })();
