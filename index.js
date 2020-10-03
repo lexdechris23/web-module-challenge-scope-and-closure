@@ -107,7 +107,7 @@ function getInningScore(func){
 function scoreboard(getInningScore, inning, numberOfInnings ) {
   let  home = 0;
   let  away = 0;
-  for(let i = 0; i < numberOfInnings; i++){
+  for(let i = 1; i < numberOfInnings; i++){
     let score = getInningScore(inning);
     home = home + score.Home;
     away = away + score.Away;
@@ -117,4 +117,4 @@ function scoreboard(getInningScore, inning, numberOfInnings ) {
 }
 
 
-scoreboard(getInningScore, inning, 9);
+scoreboard(getInningScore, inning, 10gi);
